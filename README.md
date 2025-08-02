@@ -19,10 +19,45 @@ git config --global user.email "your@email.com"
 ```
 
 ### Git Init
-To start git version system, go to your desired project folder in terminal and enter `git init`. It'll initialize git for the folder and for all of its files and subfolders.
+To start git version system, go to your desired project folder in terminal and enter 
+```
+git init
+```
+It'll initialize git for the folder and for all of its files and subfolders.
 
+### Git Status
+Status shows you what files are untracked, branch info, commit info, etc. Command:
+```
+git status
+```
+Example Output:
+```
+On branch main
+Your branch is up to date with 'origin/main'.
 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
 
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+### Git add (Staging)
+Staging is basically adding the untracked files in a queue to be tracked. Command
+```
+git add <filename>  # Specific files to be staged
+git add .           # Stages all the changes of that folder and subfolders
+```
+
+### Git Commit
+Commit is saving the version of the files(s) that has been changes/added/deleted. Command:
+```
+git commit -m "Commit Message"      # Commit staged changes
+git commit -a -m "Commit Message"   # Commit all tracked changes, skiping staging
+```
+
+> ...To be Continued
 ### References
 [Git Documentation](https://git-scm.com/doc)
 [W3 Schools](https://www.w3schools.com/git/default.asp?remote=github) 
