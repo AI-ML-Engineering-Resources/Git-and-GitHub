@@ -11,6 +11,16 @@ GitHub is an online service where you can store your project folder with the his
 Download and install Git from [Git site](https://git-scm.com/downloads). Check git install by entering `git --version` on any terminal of your computer. You should get something like `git version 2.45.1.windows.1`. If the terminal cannot recognize the command `git` even after installation, you might need to add the paths of *Git/bin* and *Git/cmd* folders in the environment Variables for Windows Users.
 
 ### Git Configuration
+Add your name and email to the git configurations. Below are the commands to enter in the terminal:
+
+```
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+```
+
+### Git Init
+To start git version system, go to your desired project folder in terminal and enter `git init`. It'll initialize git for the folder and for all of its files and subfolders.
+
 
 
 ### References
