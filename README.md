@@ -53,9 +53,12 @@ git add .           # Stages all the changes of that folder and subfolders
 ### Git Commit
 Commit is saving the version of the files(s) that has been changes/added/deleted. Command:
 ```
-git commit -m "Commit Message"      # Commit staged changes
-git commit -a -m "Commit Message"   # Commit all tracked changes, skiping staging
+git commit -m "Commit Message"      # Commits staged changes
+git commit -a -m "Commit Message"   # Commits all modified/deleted changes, not new files; skips staging
 ```
+
+### Git Log
+Git log shows all the actions
 
 > ...To be Continued
 ### References
