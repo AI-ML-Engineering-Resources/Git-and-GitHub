@@ -23,6 +23,10 @@ To start git version system, go to your desired project folder in terminal and e
 ```
 git init
 ```
+Example Outout:
+```
+Initialized empty Git repository in C:/Personal-Projects/test/.git/
+```
 It'll initialize git for the folder and for all of its files and subfolders.
 
 ### Git Status
@@ -55,7 +59,6 @@ Commit is saving the version of the files(s) that has been changes/added/deleted
 ```
 git commit -m "Commit Message"           # Commits staged changes
 git commit -a -m "Commit Message"        # Commits all modified/deleted changes, not new files; skips staging
-git commit --amend --no-edit                     # Uses previous commit message
 git commit --allow-empty -m "Message"    # Empty commit, no change added
 ```
 
