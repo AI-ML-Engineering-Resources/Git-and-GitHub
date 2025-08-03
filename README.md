@@ -77,13 +77,30 @@ See tracked/untracked changes using diff. Commands:
 git diff            # Unstaged changes
 git diff -staged    # Staged changes
 ```
+To end the diff mode, just press q in the terminal.
+
 ### Git Branch
 Branching is like creating a seperate workplace for the project where you can create new versions and its changes without affecting the main section. Commands:
 ```
-git branch                  # Lists all branches
-git branch <branch name>    # Create a new branch
-git checkout <branch name>  # Changes your workplace to the specific branch
+git branch                      # Lists all branches
+git branch <branch-name>        # Create a new branch
+git checkout <branch-name>      # Changes your workplace to the specific branch
+git checkout -b <branch-name>   # Create a new branch if not existed and changes workplace
+git branch -d <branch-name>     # Deletes the branch named
 ```
+
+### Git Merge
+You can merge 2 branches and make one branch contain all the changes. Commands:
+```
+git merge <branch-name>             # Branch name is the branch to be merged with the branch you're currently in
+git merge --abort                   # Aborting a merge if faced issues
+git merge --squash <branch-name>    # Combining all changes of the branch into a single commit for merge
+git merge --no-ff <branch-name>     # No fast forward; creates a merge commit for clear history
+```
+
+### Resolving Merge Conflicts
+Conflicts happen during merging when the same thing has been changed in both branches. Look for `<<<<<<< HEAD`, `=======`, `>>>>>>>` lines. Then decide which lines to keep in between these lines. Then after finalizing, detele these lines as well. Then commit your changes to confirm.
+
 > ...To be Continued
 ### References
 [Git Documentation](https://git-scm.com/doc)
