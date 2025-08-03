@@ -34,18 +34,6 @@ Status shows you what files are untracked, branch info, commit info, etc. Comman
 ```
 git status
 ```
-Example Output:
-```
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   README.md
-
-no changes added to commit (use "git add" and/or "git commit -a")
-```
 
 ### Git add (Staging)
 Staging is basically adding the untracked files in a queue to be tracked. Command
@@ -62,6 +50,18 @@ git commit -a -m "Commit Message"        # Commits all modified/deleted changes,
 git commit --allow-empty -m "Message"    # Empty commit, no change added
 ```
 
+### Git Stash
+Stashing is like creating a temporary storage for the changes (like a clipboard). It saves the temporary changes and returns to the last commited version for the repository. Commands:
+```
+git stash                       # Stashing tracked changes
+git stash -u                    # Stashing tracked/untracked changes
+git stash push -m "Message"     # Stash with message
+git stash list                  # List all stashes
+git stash pop                   # Reapplies latest stash changes and takes off the stash list
+git stash apply                 # Reapplies latest stash changes but keeps the stash in the list
+git stash apply stash@{n}       # Reapplies specific stash
+```
+
 ### Git Log
 Git log shows the history. Command:
 ```
@@ -71,7 +71,19 @@ git log --stat          # Shows filenames which changed with history as well
 ```
 To end the log mode, just press q in the terminal.
 
-
+### Git diff
+See tracked/untracked changes using diff. Commands:
+```
+git diff            # Unstaged changes
+git diff -staged    # Staged changes
+```
+### Git Branch
+Branching is like creating a seperate workplace for the project where you can create new versions and its changes without affecting the main section. Commands:
+```
+git branch                  # Lists all branches
+git branch <branch name>    # Create a new branch
+git checkout <branch name>  # Changes your workplace to the specific branch
+```
 > ...To be Continued
 ### References
 [Git Documentation](https://git-scm.com/doc)
